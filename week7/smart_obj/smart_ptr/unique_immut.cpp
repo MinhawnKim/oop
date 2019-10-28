@@ -70,7 +70,9 @@ unique_immut& unique_immut::operator=(unique_immut& r){
     if(_mgr == r._mgr){
 	return *this;
     }
+    unique_immut ui(r);
     release();
-    return r;
+    r.release();
+    return ui;
 }
 } // end of namespace ptr

@@ -58,5 +58,6 @@ shared_mut& shared_mut::operator=(const shared_mut &r){
     release();
     _mgr = r._mgr;
     increase();
+    return *this;
 }
 } // end of namespace ptr
