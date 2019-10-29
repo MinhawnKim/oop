@@ -26,6 +26,7 @@ unique_immut::~unique_immut() {
 void unique_immut::release(){
     if(_mgr != nullptr){
 	delete(_mgr);
+	_mgr = nullptr;
     }
 }
 Object* unique_immut::get() const{

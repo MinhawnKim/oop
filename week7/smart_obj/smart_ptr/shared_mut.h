@@ -17,7 +17,7 @@ public:
     shared_mut();
     explicit shared_mut(Object* obj);
     ~shared_mut();
-
+    shared_mut(const shared_mut& a);
     Object* get() const;
     void release();
     int count();

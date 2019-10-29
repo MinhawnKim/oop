@@ -30,19 +30,19 @@ int test_shared_plus1() {
     int result = 1;
     if (a->get() != 11) {
         result = 0;
-        string str(__func__, ": Error is a->get() != 11");
+        string str(": Error is a->get() != 11");
         print_error(str);
     }
 
     if (b->get() != 7) {
         result = 0;
-        string str(__func__, ": Error is b->get() != 7");
+        string str(": Error is b->get() != 7");
         print_error(str);
     }
 
     if (c->get() != 18) {
         result = 0;
-        string str(__func__, ": Error is c->get() != 18");
+        string str(": Error is c->get() != 18");
         print_error(str);
     }
     return result;
@@ -56,19 +56,19 @@ int test_shared_plus2() {
     int result = 1;
     if (a.count() != 1) {
         result = 0;
-        string str(__func__, ": Error is a.count() != 1");
+        string str(": Error is a.count() != 1");
         print_error(str);
     }
 
     if (b.count() != 1) {
         result = 0;
-        string str(__func__, ": Error is b.count() != 1");
+        string str(": Error is b.count() != 1");
         print_error(str);
     }
 
     if (c.count() != 1) {
         result = 0;
-        string str(__func__, ": Error is c.count() != 1");
+        string str(": Error is c.count() != 1");
         print_error(str);
     }
     return result;
@@ -82,19 +82,19 @@ int test_shared_plus3() {
     int result = 1;
     if (a.count() != 2) {
         result = 0;
-        string str(__func__, ": Error is a.count() != 2");
+        string str(": Error is a.count() != 2");
         print_error(str);
     }
 
     if (b.count() != 2) {
         result = 0;
-        string str(__func__, ": Error is b.count() != 2");
+        string str(": Error is b.count() != 2");
         print_error(str);
     }
 
     if (c.count() != 1) {
         result = 0;
-        string str(__func__, ": Error is c.count() != 1");
+        string str(": Error is c.count() != 1");
         print_error(str);
     }
     return result;
@@ -109,31 +109,31 @@ int test_shared() {
         shared_ref c = b;
         if (a.count() != 3) {
             result = 0;
-            string str(__func__, ": Error is a.count() != 3");
+            string str(": Error is a.count() != 3");
             print_error(str);
         }
 
         if (b.count() != 3) {
             result = 0;
-            string str(__func__, ": Error is b.count() != 3");
+            string str(": Error is b.count() != 3");
             print_error(str);
         }
         if (c.count() != 3) {
             result = 0;
-            string str(__func__, ": Error is c.count() != 3");
+            string str(": Error is c.count() != 3");
             print_error(str);
         }
     }
 
     if (a.count() != 2) {
         result = 0;
-        string str(__func__, ": Error is a.count() != 2");
+        string str(": Error is a.count() != 2");
         print_error(str);
     }
 
     if (b.count() != 2) {
         result = 0;
-        string str(__func__, ": Error is b.count() != 2");
+        string str(": Error is b.count() != 2");
         print_error(str);
     }
 
@@ -148,25 +148,25 @@ int test_shared_base() {
 
     if (a.get() != obj) {
         result = 0;
-        string str(__func__, ": Error is a.get() != obj");
+        string str(": Error is a.get() != obj");
         print_error(str);
     }
 
     if (a.get() != b.get()) {
         result = 0;
-        string str(__func__, ": Error is a.get() != b.get()");
+        string str(": Error is a.get() != b.get()");
         print_error(str);
     }
 
     if (a->get() != 11) {
         result = 0;
-        string str(__func__, ": Error is a.get() != 11");
+        string str(": Error is a.get() != 11");
         print_error(str);
     }
 
     if (b->get() != 11) {
         result = 0;
-        string str(__func__, ": Error is a.get() != 11");
+        string str(": Error is a.get() != 11");
         print_error(str);
     }
 
@@ -183,43 +183,43 @@ int test_shared_base2() {
         c.release();
         if (a.count() != 2) {
             result = 0;
-            string str(__func__, ": Error is a.count() != 2");
+            string str( ": Error is a.count() != 2");
             print_error(str);
         }
         if (b.count() != 2) {
             result = 0;
-            string str(__func__, ": Error is b.count() != 2");
+            string str( ": Error is b.count() != 2");
             print_error(str);
         }
         if (c.count() != 0) {
             result = 0;
-            string str(__func__, ": Error is c.count() != 0");
+            string str( ": Error is c.count() != 0");
             print_error(str);
         }
         if (c.get() != nullptr) {
             result = 0;
-            string str(__func__, ": Error is c.get() != nullptr");
+            string str( ": Error is c.get() != nullptr");
             print_error(str);
         }
         c.release();
         if (a.count() != 2) {
             result = 0;
-            string str(__func__, ": Error is a.count() != 2");
+            string str( ": Error is a.count() != 2");
             print_error(str);
         }
         if (b.count() != 2) {
             result = 0;
-            string str(__func__, ": Error is b.count() != 2");
+            string str( ": Error is b.count() != 2");
             print_error(str);
         }
         if (c.count() != 0) {
             result = 0;
-            string str(__func__, ": Error is c.count() != 0");
+            string str( ": Error is c.count() != 0");
             print_error(str);
         }
         if (c.get() != nullptr) {
             result = 0;
-            string str(__func__, ": Error is c.get() != nullptr");
+            string str( ": Error is c.get() != nullptr");
             print_error(str);
         }
     }
@@ -236,13 +236,13 @@ int test_unique_plus1() {
     unique_obj b(new Object(7));
     if (a->get() != 11) {
         result = 0;
-        string str(__func__, ": Error is a->get() != 11");
+        string str( ": Error is a->get() != 11");
         print_error(str);
     }
 
     if (b->get() != 7) {
         result = 0;
-        string str(__func__, ": Error is b->get() != 7");
+        string str( ": Error is b->get() != 7");
         print_error(str);
     }
 
@@ -250,19 +250,19 @@ int test_unique_plus1() {
 
     if (a.get() != nullptr) {
         result = 0;
-        string str(__func__, ": Error is a.get() != nullptr");
+        string str( ": Error is a.get() != nullptr");
         print_error(str);
     }
 
     if (b.get() != nullptr) {
         result = 0;
-        string str(__func__, ": Error is b.get() != nullptr");
+        string str( ": Error is b.get() != nullptr");
         print_error(str);
     }
 
     if (c->get() != 18) {
         result = 0;
-        string str(__func__, ": Error is c->get() != 18");
+        string str( ": Error is c->get() != 18");
         print_error(str);
     }
     return result;
@@ -275,7 +275,7 @@ int test_unique_base() {
         unique_obj c(new Object(30));
         if (a->get() != c->get()) {
             result = 0;
-            string str(__func__, ": Error is a->get() != c->get()");
+            string str( ": Error is a->get() != c->get()");
             print_error(str);
         }
     }
@@ -289,13 +289,13 @@ int test_unique_base2() {
         c.release();
         if (c.get() != nullptr) {
             result = 0;
-            string str(__func__, ": Error is c.get() != nullptr");
+            string str( ": Error is c.get() != nullptr");
             print_error(str);
         }
         c.release();
         if (c.get() != nullptr) {
             result = 0;
-            string str(__func__, ": Error is c.get() != nullptr");
+            string str( ": Error is c.get() != nullptr");
             print_error(str);
         }
     }
