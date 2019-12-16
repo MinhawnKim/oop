@@ -76,7 +76,6 @@ class puyo{
 		    if(p_color != 0){
 			set_insert(p);
 			if(p_set.size() >= 4){
-			    cout << "set_size() > 4" <<endl;
 			    for(auto it = p_set.begin(); it != p_set.end(); it++){
 				point it_p = *it;
 				int px = it_p.first;
